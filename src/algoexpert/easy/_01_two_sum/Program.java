@@ -1,6 +1,4 @@
-package algoexpert._01_two_sum;
-
-import java.util.*;
+package algoexpert.easy._01_two_sum;
 
 class Program {
     public static int[] twoNumberSum(int[] array, int targetSum) {
