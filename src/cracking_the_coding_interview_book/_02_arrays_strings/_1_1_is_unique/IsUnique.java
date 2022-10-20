@@ -1,4 +1,4 @@
-package cracking_the_coding_interview_book._02_data_structures.interview_questions._1_1_is_unique;
+package cracking_the_coding_interview_book._02_arrays_strings._1_1_is_unique;
 
 /**
  * Implement an algorithm to determine if a string has all unique characters

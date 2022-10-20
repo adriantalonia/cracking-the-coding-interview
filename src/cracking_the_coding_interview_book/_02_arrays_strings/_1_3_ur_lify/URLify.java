@@ -1,4 +1,4 @@
-package cracking_the_coding_interview_book._02_data_structures.interview_questions._1_3_ur_lify;
+package cracking_the_coding_interview_book._02_arrays_strings._1_3_ur_lify;
 
 public class URLify {
 

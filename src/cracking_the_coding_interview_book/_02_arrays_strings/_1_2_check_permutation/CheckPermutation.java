@@ -1,4 +1,4 @@
-package cracking_the_coding_interview_book._02_data_structures.interview_questions._1_2_check_permutation;
+package cracking_the_coding_interview_book._02_arrays_strings._1_2_check_permutation;
 
 import java.util.Arrays;
 
