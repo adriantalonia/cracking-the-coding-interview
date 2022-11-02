@@ -17,6 +17,7 @@ public class NonConstructibleChange {
             change += coins[x];
             if(coins.length < x+1 && coins[x+1] > change +1) {
                 return change + 1;
+
             }
         }
         return -1;
