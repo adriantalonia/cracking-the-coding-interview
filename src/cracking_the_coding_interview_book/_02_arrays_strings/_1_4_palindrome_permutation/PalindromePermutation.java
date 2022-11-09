@@ -4,12 +4,12 @@ public class PalindromePermutation {
 
     public static void main(String[] args) {
         String test = "Tact Coa";
-        String test2 = "abcc";
-        System.out.println("isPermutationOfPalindrome Tact Coa: " + isPermutationOfPalindrome(test));
-        System.out.println("isPermutationOfPalindrome abcc: " + isPermutationOfPalindrome(test2));
+        String test2 = "abb";
+       /* System.out.println("isPermutationOfPalindrome Tact Coa: " + isPermutationOfPalindrome(test));
+        System.out.println("isPermutationOfPalindrome abb: " + isPermutationOfPalindrome(test2));
 
-        System.out.println("isPermutationOfPalindrome2 Tact Coa: " + isPermutationOfPalindrome2(test));
-        System.out.println("isPermutationOfPalindrome2 abcc: " + isPermutationOfPalindrome2(test2));
+        System.out.println("isPermutationOfPalindrome2 Tact Coa: " + isPermutationOfPalindrome2(test));*/
+        System.out.println("isPermutationOfPalindrome2 abb: " + isPermutationOfPalindrome2(test2));
     }
 
     /*
@@ -61,6 +61,7 @@ public class PalindromePermutation {
      * */
 
     private static boolean isPermutationOfPalindrome2(String phrase) {
+        if(phrase.length() == 3) return phrase.charAt(0) == phrase.charAt(2);
         int countOdd = 0;
         int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
 
@@ -68,7 +69,7 @@ public class PalindromePermutation {
             int x = getCharNumber(c);
             if (x != -1) {
                 table[x]++;
-                if (table[x] % 2 == 1) {
+                if (table[x] != 1 && table[x] % 2 == 1) {
                     countOdd++;
                 } else {
                     countOdd--;
