@@ -5,10 +5,10 @@ public class PalindromePermutation {
     public static void main(String[] args) {
         String test = "Tact Coa";
         String test2 = "abb";
-       /* System.out.println("isPermutationOfPalindrome Tact Coa: " + isPermutationOfPalindrome(test));
+        System.out.println("isPermutationOfPalindrome Tact Coa: " + isPermutationOfPalindrome(test));
         System.out.println("isPermutationOfPalindrome abb: " + isPermutationOfPalindrome(test2));
 
-        System.out.println("isPermutationOfPalindrome2 Tact Coa: " + isPermutationOfPalindrome2(test));*/
+        System.out.println("isPermutationOfPalindrome2 Tact Coa: " + isPermutationOfPalindrome2(test));
         System.out.println("isPermutationOfPalindrome2 abb: " + isPermutationOfPalindrome2(test2));
     }
 
