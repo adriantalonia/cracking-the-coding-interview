@@ -6,6 +6,8 @@ public class BinarySearch {
         int init = 0;
         int last = n-1;
 
+
+
         return search(arr, k, init, last);
     }
 
