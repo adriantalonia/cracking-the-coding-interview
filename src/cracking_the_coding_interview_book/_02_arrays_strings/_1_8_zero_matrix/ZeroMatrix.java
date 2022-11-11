@@ -15,7 +15,8 @@ public class ZeroMatrix {
         numbers[2][2] = 9;
 
         printMatrix(numbers);
-        setZeros(numbers);
+        //setZeros(numbers);
+        setZeros2(numbers);
         printMatrix(numbers);
     }
 
@@ -52,6 +53,55 @@ public class ZeroMatrix {
         }
     }
 
+    private static void setZeros2(int[][] matrix) {
+        boolean rowHasZero = false;
+        boolean columnHasZero = false;
+
+        // first row has a zero???
+        for (int j = 0; j < matrix[0].length; j++) {
+            if (matrix[0][j] == 0) {
+                rowHasZero = true;
+                break;
+            }
+        }
+
+        // first column has a zero???
+        for (int i = 0; i < matrix.length; i++) {
+            if (matrix[i][0] == 0) {
+                columnHasZero = true;
+                break;
+            }
+        }
+
+        // check zeros rest of the array
+        for (int i = 1; i < matrix.length; i++) {
+            for (int j = 1; j < matrix[0].length; j++) {
+                if (matrix[i][j] == 0) {
+                    matrix[i][0] = 0;
+                    matrix[0][j] = 0;
+                }
+            }
+        }
+
+        for (int i = 1; i < matrix.length; i++) {
+            if (matrix[i][0] == 0) nullifyRow(matrix, i);
+        }
+
+        for (int j = 1; j < matrix[0].length; j++) {
+            if (matrix[0][j] == 0) nullifyColumn(matrix, j);
+        }
+
+        if (rowHasZero) {
+            nullifyRow(matrix, 0);
+        }
+
+        if (columnHasZero) {
+            nullifyColumn(matrix, 0);
+        }
+
+    }
+
+
     private static void nullifyRow(int[][] matrix, int row) {
         for (int j = 0; j < matrix[0].length; j++) {
             matrix[row][j] = 0;
@@ -63,4 +113,6 @@ public class ZeroMatrix {
             matrix[i][column] = 0;
         }
     }
+
+
 }
